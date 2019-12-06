@@ -29,8 +29,8 @@ class Items:
         return df
 
     @staticmethod
-    def categorize(df: pd.DataFrame) -> pd.DataFrame:
-        """Cast columns with repeating values to `category` type to save memory"""
+    def categorize(df: pd.DataFrame) -> None:
+        """Cast columns with repeating values to `category` type inplace to save memory"""
         if len(df) < 100:
             return
         for c in tqdm(df.columns, desc="Categorizing"):
