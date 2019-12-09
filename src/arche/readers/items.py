@@ -30,7 +30,7 @@ class Items:
 
     @staticmethod
     def categorize(df: pd.DataFrame) -> None:
-        """Cast columns with repeating values to `category` type inplace
+        """Cast columns with repeating values to `category` type in-place
         to save memory"""
         if len(df) < 100:
             return
